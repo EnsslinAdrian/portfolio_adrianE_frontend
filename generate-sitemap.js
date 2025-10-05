@@ -30,7 +30,7 @@ if (!angularFolder) {
   process.exit(1);
 }
 
-const outputDir = path.join(distPath, angularFolder);
+const outputDir = path.join(distPath, angularFolder, 'browser');
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
 }
