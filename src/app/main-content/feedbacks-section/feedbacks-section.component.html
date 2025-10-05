@@ -1,0 +1,26 @@
+<div class="content-wrapper">
+  <section fadeUp>
+    <h3>{{language ? 'What my colleagues say about me' : 'Was meine Kollegen über mich sagen'}}</h3>
+
+    <div class="feedback-container">
+      <div class="bg-color"></div>
+      <div *ngFor="let slide of slides; let i = index" class="slide" [ngStyle]="{ transform: getTransform(i) }">
+        <p class="feedback-text">{{language ? feebackTextE[i] : feebackTextDe[i]}}</p>
+        <div class="team-container">
+          <div class="line"></div>
+          <p class="team">{{feebackPartner[i]}}-Team Partner</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-container">
+      <img (click)="imgBack()" src="/images/arrows/arrow_back.png" alt="">
+      <p *ngFor="let slide of slides; let i = index" [style.color]="getPointColor(i)">
+        •
+      </p>
+      <img (click)="imgForward()" src="/images/arrows/arrow_forward.png" alt="">
+
+    </div>
+  </section>
+
+</div>

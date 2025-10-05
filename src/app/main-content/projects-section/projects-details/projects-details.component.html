@@ -1,0 +1,39 @@
+<div class="overlay" *ngIf="showDetails" (click)="closeDetails()">
+  <div class="content-wrapper">
+  <div class="projects-container" (click)="$event.stopPropagation()">
+    <div class="details-container">
+
+      <div class="project-details">
+        <p class="project-index">0{{index + 1}}</p>
+        <p class="project-title">{{projectsService.projects[index].title}}</p>
+        <app-typografie text="Worum geht es in diesem Projekt?" size="xmedium" color="green" [weight]="700"
+          [font]="'fira'"></app-typografie>
+        <app-typografie text="{{projectsService.projects[index].discriptionDe}}" size="small" color="white"
+          [weight]="400" [font]="'karla'"></app-typografie>
+        <div class="skills">
+          <ng-container *ngFor="let skill of projectsService.projects[index].skills; index as i; let last = last">
+            <app-typografie [text]="skill" size="small" color="white" [weight]="400" [font]="'karla'"></app-typografie>
+          </ng-container>
+        </div>
+      </div>
+
+      <div class="project-image-container">
+        <img (click)="closeDetails()" class="close-image" src="/images/menu_icons/close_small.png" alt="">
+        <img class="project-image" [src]="projectsService.projects[index].popupImage" alt="">
+      </div>
+    </div>
+
+    <div class="project-controls">
+      <div class="links-container">
+        <a target="_blank" href="{{projectsService.projects[index].github}}" class="links">Github</a>
+        <a target="_blank" href="{{projectsService.projects[index].link}}" class="links">Live testen</a>
+      </div>
+      <div class="next-project-container">
+        <p (click)="showNextProject()" class="next-project">Nächstes Projekt ⇾</p>
+      </div>
+
+    </div>
+
+  </div>
+  </div>
+</div>

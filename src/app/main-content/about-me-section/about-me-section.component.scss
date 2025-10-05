@@ -1,0 +1,82 @@
+section {
+  height: auto;
+  width: 100%;
+  background-color: var(--bg-dark);
+}
+
+.content-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 50px 96px;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+
+  @media(max-width: 1120px) {
+    padding: 50px 24px;
+  }
+
+  @media(max-width: 900px) {
+    flex-direction: column;
+    padding: 50px 10px;
+  }
+}
+
+.who-i-am-container {
+  width: 50%;
+  margin-top: 75px;
+
+  @media(max-width: 900px) {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.my-picture {
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  position: relative;
+}
+
+.my-picture-container {
+  height: 550px;
+  width: 50%;
+  position: relative;
+
+  @media(max-width: 900px) {
+    width: 100%;
+  }
+
+  @media(max-width: 600px) {
+    height: 400px;
+  }
+
+
+  .my-picture {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    &:hover+.dashed-lines-image {
+      transform: translateX(-30px) translateY(30px);
+    }
+  }
+
+  .dashed-lines-image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 30px;
+    transition: all 250ms ease-in-out;
+
+  }
+}
+

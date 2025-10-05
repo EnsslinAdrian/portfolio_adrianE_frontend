@@ -1,0 +1,40 @@
+<section>
+  <div class="content-wrapper" fadeUp>
+    <app-typografie text="Portfolio" size="xmedium" color="green" [weight]="400" [align]="'left'" [font]="'karla'">
+    </app-typografie>
+    <h3>{{language ? 'Featured Projects' : 'Projekte'}}</h3>
+
+    <app-typografie text="{{language ? descriptionE : descriptionDe}}" size="small" color="white" [weight]="400"
+      [align]="'left'" [font]="'karla'">
+    </app-typografie>
+
+    <div class="projects-container">
+      <div class="product-card-container" *ngFor="let project of projectsService.projects; let i = index">
+
+        <div class="project-card" (mouseenter)="setCurrentProject(i)" (mouseleave)="setCurrentProject(-1)" (click)="openCurrentProject(project)">
+          <app-typografie [text]="project.title" size="xmedium" color="white" [weight]="700"
+            [font]="'fira'"></app-typografie>
+          <div class="skills">
+            <ng-container *ngFor="let skill of project.skills; index as i; let last = last">
+              <app-typografie [text]="skill" size="small" color="dark-white" [weight]="400"
+                [font]="'karla'"></app-typografie>
+              <div class="between-line" *ngIf="!last"></div>
+            </ng-container>
+          </div>
+        </div>
+
+        <div class="project-image-container">
+          <img class="project-image" *ngIf="currentProjectIndex === i" src="{{project.image}}" alt="">
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<app-projects-details
+[showDetails]="showDetails"
+(closeDetailsEvent)="closeDetails()"
+[index]="index">
+</app-projects-details>

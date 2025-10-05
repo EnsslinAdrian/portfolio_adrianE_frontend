@@ -1,0 +1,66 @@
+.xsmall {
+  font-size: 14px;
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
+}
+.small {
+  font-size: 18px;
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+  }
+}
+
+.medium {
+  font-size: 20px;
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
+}
+
+.xmedium {
+  font-size: 24px;
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
+}
+
+.large {
+  font-size: 64px;
+
+  @media (max-width: 480px) {
+    font-size: 56px;
+  }
+}
+
+.white {
+  color: var(--white);
+}
+
+.black {
+  color: var(--black);
+}
+
+.green {
+  color: var(--green);
+}
+
+.red {
+  color: rgb(180, 0, 0);
+}
+
+.dark-white {
+  color: #FFFFFFCC;
+}
+
+.fira {
+  font-family: 'Fira Code';
+}
+
+.karla {
+  font-family: 'Karla';
+}

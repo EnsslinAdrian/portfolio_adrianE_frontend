@@ -1,0 +1,17 @@
+<div class="skill-text-container">
+
+  <h3>{{language ? 'Skill Set' : 'Skills'}}</h3>
+
+  <app-typografie text="{{language ? descriptionE : descriptionDe}}" size="small" color="white" [weight]="400"
+    [align]="'left'" [font]="'karla'">
+  </app-typografie>
+
+  <h5>{{language ? 'You need' : 'Sie benötigen'}}<span>{{language ? 'another skill?' : 'eine der Fähigkeiten'}}</span>
+  </h5>
+
+  <app-typografie text="{{language ? contactMeE : contactMeDe}}" size="small" color="white" [weight]="400"
+    [align]="'left'" [font]="'karla'">
+  </app-typografie>
+
+  <button (click)="contact()">{{language ? 'Lets Talk' : 'Lassen Sie uns sprechen'}}</button>
+</div>

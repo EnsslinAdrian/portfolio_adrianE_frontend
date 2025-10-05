@@ -1,0 +1,16 @@
+<div class="info-text-container">
+  <app-typografie text="{{language ? 'Contact me' : 'Kontaktiere Sie mich'}}" size="xmedium" color="green" [weight]="700"
+    [align]="'left'" [font]="'karla'">
+  </app-typografie>
+  <app-typografie text="{{language ? 'Lets work together' : 'Lassen Sie uns zusammen arbeiten'}}" size="large" lineHeight="1"
+    color="green" [weight]="800" [align]="'left'" [font]="'karla'">
+  </app-typografie>
+  <app-typografie text="{{language ? 'Got a problem to solve?' : 'Haben Sie ein Problem zu lösen?'}}" size="xmedium"
+    color="green" [weight]="700" [align]="'left'" [font]="'karla'">
+  </app-typografie>
+  <app-typografie text="{{language ? contactTextE : contactTextDe}}" size="small" color="white" [weight]="400"
+    [align]="'left'" [font]="'karla'">
+  </app-typografie>
+  <p class="talk-text">{{language ? 'Need a Fullstack developer?' : 'Brauchen Sie einen Fullstack-Entwickler?'}}<span
+      style="margin-left: 10px;">{{language ? 'Let’s talk!' : 'Lassen Sie uns sprechen!'}}</span></p>
+</div>

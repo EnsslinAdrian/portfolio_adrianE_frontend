@@ -1,0 +1,36 @@
+<div class="who-i-am-headline">
+      <app-typografie text="{{language ? 'Who I Am' : 'Wer Ich bin'}}" size="xmedium" color="green" [weight]="400"
+      [align]="'left'" [font]="'karla'">
+    </app-typografie>
+</div>
+<div class="my-story-container">
+
+
+  <h3>{{language ? 'About me' : 'Über mich'}}</h3>
+
+  <app-typografie text="{{language ? descriptionE : descriptionDe}}" size="small" color="white" [weight]="400"
+    [align]="'left'" [font]="'karla'">
+  </app-typografie>
+
+  <div class="info-text-container">
+    <img src="/images/about-me/location_on.png" alt="Location">
+        <app-typografie text="{{language ? locationE : locationDe}}" size="small" color="dark-white" [weight]="400"
+          [align]="'left'" [font]="'karla'">
+        </app-typografie>
+  </div>
+
+  <div class="info-text-container">
+    <img src="/images/about-me/cognition.png" alt="Cognition">
+    <app-typografie text="{{language ? cognitionE : cognitionDe}}" size="small" color="dark-white" [weight]="400"
+      [align]="'left'" [font]="'karla'">
+    </app-typografie>
+  </div>
+
+  <div class="info-text-container">
+    <img src="/images/about-me/new_releases.png" alt="New Releases">
+    <app-typografie text="{{language ? newReleasesE : newReleasesDe}}" size="small" color="dark-white" [weight]="400"
+      [align]="'left'" [font]="'karla'">
+    </app-typografie>
+  </div>
+
+</div>

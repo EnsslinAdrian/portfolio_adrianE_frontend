@@ -1,0 +1,56 @@
+<div class="email-container">
+    <form (ngSubmit)="onSubmit()" [formGroup]="emailForm">
+
+        <div class="init-container" [ngClass]="['line']">
+            <app-formfield
+              label="{{language ? 'Whats your name?' : 'Wie ist Ihr Name?'}}"
+              type="text"
+              placeholder="{{language ? 'Your name goes here' : 'Ihr Name hier eingeben'}}"
+              controlName="name"
+              inputId="name"
+              [errorMessages]="{ required: 'Name ist erforderlich' }">
+            </app-formfield>
+        </div>
+
+        <div class="init-container">
+            <app-formfield
+              label="{{language ? 'Whats your email?' : 'Wie lautet Ihre E-Mail?'}}"
+              type="email"
+              placeholder="{{language ? 'Your email goes here' : 'Ihre E-Mail hier eingeben'}}"
+              controlName="email"
+              inputId="email"
+              [errorMessages]="{ required: 'Email ist erforderlich', email: 'Ungültige Email-Adresse' }">
+          </app-formfield>
+        </div>
+
+        <div class="init-container" [ngClass]="['line']">
+            <app-formfield
+              label="{{language ? 'How can I help you?' : 'Wie kann ich Ihnen helfen?'}}"
+              type="text"
+              placeholder="{{language ? 'Your message goes here' : 'Ihre Nachricht hier eingeben'}}"
+              controlName="message"
+              inputId="message"
+              [errorMessages]="{ required: 'Nachricht ist erforderlich', minlength: 'Mindestens 10 Zeichen lang' }">
+          </app-formfield>
+        </div>
+
+        <div class="check-privacy">
+            <label class="checkboxItem">
+              <input type="checkbox" name="checkbox" class="checkbox" formControlName="checkbox" />
+          </label>
+
+            <div>
+                <p>{{language ? "I've read the" : 'Ich habe die'}}
+                  <a routerLink="/datenschutz">{{language ? 'privacy policy' : 'Datenschutzrichtlinie'}}</a>
+                    {{language ? 'and agree to the processing of my data as outlined.' : 'gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.'}}</p>
+            </div>
+        </div>
+        <app-typografie *ngIf="emailForm.get('checkbox')?.invalid && emailForm.get('checkbox')?.touched" text="{{language ? 'Please confirm the privacy policy' : 'Bitte bestätigen Sie die Datenschutzrichtlinie'}}" size="xsmall" color="red" [weight]="400" [align]="'left'"></app-typografie>
+
+        <div class="btn-container">
+            <button *ngIf="sendBtn" [disabled]="!emailForm.valid" type="submit">{{language ? 'Say Hello 😊' : 'Sag Sie Hallo 😊'}} </button>
+            <app-typografie *ngIf="sendBtn == false" text="{{language ? 'I will get back to you as soon as possible.' : 'Ich werde mich so schnell wie möglich bei Ihnen melden.'}}" size="small" color="green" [weight]="400" [align]="'left'"></app-typografie>
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,38 @@
+@use './fonts.scss';
+
+:root {
+  --green: #3DCFB6;
+  --black: #000000;
+  --white: #FFFFFF;
+  --red: #b00000;
+  --bg-dark: #1C1C1C;
+  --font-fira: 'Fira Code';
+  --font-karla: 'Karla';
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.font-fira {
+  font-family: 'Fira Code';
+}
+
+.font-karla {
+  font-family: 'Karla';
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  background-color: transparent !important;
+  color: var(--white);
+  -webkit-text-fill-color: var(--white) !important;
+  transition: background-color 5000s ease-in-out 0s;
+}

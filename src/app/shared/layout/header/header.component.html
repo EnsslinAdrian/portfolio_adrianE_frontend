@@ -1,0 +1,27 @@
+<header>
+  <div class="content-wrapper">
+    <nav>
+      <div class="btn-container">
+        <button (click)="changelanguage('en')" class="btn font-fira" [ngClass]="{'bg-color-btn': language}">EN</button>
+        <button (click)="changelanguage('de')" class="btn font-fira" [ngClass]="{'bg-color-btn': language == false}">DE</button>
+      </div>
+
+      <div>
+        <a class="font-fira" routerLink="" fragment="aboutMe">{{language ? 'About me' : 'Über mich'}}</a>
+        <a class="font-fira" routerLink="" fragment="skills">{{language ? 'Skills' : 'Fähigkeiten'}}</a>
+        <a class="font-fira" routerLink="" fragment="projects">{{language ? 'Projects' : 'Projekte'}}</a>
+      </div>
+    </nav>
+
+    <img class="logo" (click)="gotToStart()" (mousemove)="hover_logo = false" (mouseleave)="hover_logo = true" src="{{hover_logo ? logo : logo_transparent}}" alt="Logo">
+    <img class="logo-init" (click)="gotToStart()" (mousemove)="hover_logo_init = false" (mouseleave)="hover_logo_init = true" src="{{hover_logo_init ? logo_init : logo_init_transparent}}" alt="Logo">
+    <img class="menu-icon" (click)="openMenuPopup()" (mousemove)="hover_menu_icon = false" (mouseleave)="hover_menu_icon = true" src="{{hover_menu_icon ? menu_icon : menu_icon_hover}}" alt="Logo">
+
+  </div>
+</header>
+
+<app-menu-mobile
+(languageChangeEvent)="changelanguage($event)"
+[openMenu]="openMenu"
+(closeMenu)="openMenu = false">
+</app-menu-mobile>

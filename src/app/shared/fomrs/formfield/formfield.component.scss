@@ -1,0 +1,111 @@
+  .input-container {
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    position: relative;
+
+    label {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--black);
+
+      @media (max-width: 480px) {
+        font-size: 14px;
+      }
+    }
+
+    .input-field {
+      background-color: transparent;
+      box-sizing: border-box;
+      padding-right: 10px;
+      border-radius: 5px;
+      width: 100%;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+
+      @media (max-width: 480px) {
+        height: 30px;
+      }
+    }
+
+    .password-eye-icon {
+      cursor: pointer;
+
+      @media (max-width: 480px) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    input {
+      border: none;
+      background-color: transparent;
+      outline: none;
+      border-radius: 5px;
+      width: 100%;
+      height: 100%;
+      font-size: 18px;
+      font-weight: 400;
+      color: white;
+      box-sizing: border-box;
+      font-family: var(--font-karla);
+
+
+      &::placeholder {
+        font-size: 18px;
+        color: #FFFFFFCC;
+      }
+    }
+  }
+
+  .border {
+    border: 1px solid var(--blue-gray);
+  }
+
+  .optional {
+    font-size: 12px;
+    color: var(--blue-gray);
+    margin-left: 5px;
+  }
+
+  .tooltip-text {
+    position: absolute;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(22, 22, 22);
+    border: 1px solid rgba(255, 255, 255, 0.445);
+    padding: 5px 10px;
+    font-size: 12px;
+    left: 0;
+    right: 0;
+    top: 110%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    width: 100%;
+    z-index: 100;
+    box-sizing: border-box;
+  }
+
+  .tooltip-container:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .white {
+    color: var(--white) !important;
+  }
+
+  .black {
+    color: var(--black) !important;
+  }
+
+  .duty {
+    font-weight: 600;
+  }

@@ -1,0 +1,58 @@
+.skill-icon-container {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 40px;
+
+  @media(max-width: 1120px) {
+    row-gap: 10px;
+    column-gap: 20px;
+  }
+
+  @media(max-width: 900px) {
+    justify-content: space-evenly;
+  }
+
+  .icons-images {
+    width: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    filter: grayscale(100%);
+
+
+    @media(max-width: 1130px) {
+      margin: 10px;
+    }
+
+    @media(max-width: 490px) {
+      width: 20%;
+      height: 80px;
+    }
+
+    img {
+      width: 60%;
+      height: 80px;
+      object-fit: contain;
+      transition: all 200ms ease-in-out;
+
+      &:hover {
+        transform: scale(110%);
+      }
+    }
+
+    p {
+      font-size: 18px;
+      color: var(--white);
+      text-align: center;
+      margin-top: 10px;
+      margin: 0;
+      font-family: var(--font-karla);
+    }
+  }
+}

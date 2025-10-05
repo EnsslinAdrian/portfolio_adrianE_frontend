@@ -1,0 +1,23 @@
+<section>
+  <div class="content-wrapper">
+    <p class="font-fira subheadline" id="subheadline">{{language ? 'Fullstack Developer' : 'Fullstack Entwickler'}}</p>
+    <h1 class="font-karla" id="headline">Adrian Enßlin</h1>
+    <div class="btn-container">
+      <a id="myWork" routerLink="" fragment="projects" class="btn">{{language ? 'Check my work' : 'Meine Arbeit'}}</a>
+      <a id="contactMe" routerLink="" fragment="contact" class="btn">{{language ? 'Contact me' : 'Kontaktiere Sie mich'}}</a>
+    </div>
+
+    <div class="sliding-container">
+      <div class="sliding-content">
+        <ng-container *ngFor="let item of (language ? items : itemsDE)">
+          <p class="sliding-text font-karla">{{ item }}</p>
+        </ng-container>
+        <ng-container *ngFor="let item of (language ? items : itemsDE)">
+          <p class="sliding-text font-karla">{{ item }}</p>
+        </ng-container>
+      </div>
+    </div>
+
+
+  </div>
+</section>

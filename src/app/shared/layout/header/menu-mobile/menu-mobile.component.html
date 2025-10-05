@@ -1,0 +1,15 @@
+<div class="menu-popup-container" [ngClass]="{'show-menu-popup' : openMenu}">
+    <img (click)="closeMenuPopup()" class="close-icon"  src="{{hover_close_icon ? menu_close_icon : menu_close_icon_hover}}" alt="Close">
+
+    <div class="nav-container">
+        <a class="font-fira" (click)="closeMenuPopup()" href="#aboutMe">Über mich</a>
+        <a class="font-fira" (click)="closeMenuPopup()" href="#skills">Fähigkeiten</a>
+        <a class="font-fira" (click)="closeMenuPopup()" href="#projects">Projekte</a>
+    </div>
+
+    <div class="btn-container">
+        <button (click)="changelanguage('en')" class="btn" [ngClass]="{'bg-color-btn': language}">EN</button>
+        <button (click)="changelanguage('de')" class="btn" [ngClass]="{'bg-color-btn': language == false}">DE</button>
+    </div>
+
+</div>

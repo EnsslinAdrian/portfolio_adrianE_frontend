@@ -1,0 +1,131 @@
+section {
+  width: 100%;
+  background-color: var(--bg-dark);
+  display: flex;
+  justify-content: center;
+}
+
+.content-wrapper {
+  height: 100%;
+  width: 100%;
+  max-width: 1480px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 20px;
+  box-sizing: border-box;
+  padding: 50px 96px;
+
+  @media(max-width: 1120px) {
+    padding: 50px 24px;
+  }
+
+  @media (max-width: 900px) {
+    padding: 50px 10px;
+  }
+}
+
+h3 {
+  font-size: 64px;
+  color: var(--green);
+  font-family: var(--font-fira);
+  font-weight: 700;
+  line-height: 56px;
+  margin: 0;
+
+  @media(max-width: 815px) {
+    font-size: 54px;
+  }
+}
+
+.projects-container {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.project-card {
+  width: 70%;
+  height: auto;
+  align-self: stretch;
+  box-sizing: border-box;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid var(--green);
+  cursor: pointer;
+  flex-wrap: wrap;
+
+  @media (max-width: 1120px) {
+    width: 100%;
+    gap: 10px;
+  }
+
+  @media (max-width: 720px) {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px 10px;
+  }
+
+  &:hover {
+    background-color: #3DCFB61A;
+  }
+}
+
+.project-card:last-child {
+  border-bottom: 1px solid var(--green);
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.between-line {
+  border: 1px solid var(--green);
+}
+
+
+.product-card-container {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+  gap: 50px;
+}
+
+.project-image-container {
+  height: 100px;
+  width: auto;
+  border-radius: 20px;
+  position: relative;
+
+  @media (max-width: 1120px) {
+   display: none;
+  }
+
+  .project-image {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: scale-down;
+    transform: scale(1.7);
+  }
+
+  .green-bg {
+    position: absolute;
+    bottom: -25px;
+    right: 0px;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.2);
+  }
+
+  transform: scale(1.2);
+}

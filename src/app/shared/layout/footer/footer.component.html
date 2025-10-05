@@ -1,0 +1,26 @@
+<footer>
+  <div class="content-wrapper">
+    <div class="logo-container">
+      <img (click)="reloadPage()" (mousemove)="hover_logo = false" (mouseleave)="hover_logo = true"
+        src="{{hover_logo ? logo : logo_transparent}}" alt="Logo">
+      <app-typografie text="{{language ? 'Web Developer' : 'Web Entwickler'}}" size="small" color="white" [weight]="400"
+        [align]="'left'" [font]="'karla'">
+      </app-typografie>
+      <app-typografie text="Donauwörth {{language ? 'Germany' : 'Deutschland'}}" size="small" color="white" [weight]="400"
+        [align]="'left'" [font]="'karla'">
+      </app-typografie>
+
+    </div>
+
+    <h6>© Adrian Enßlin 2024</h6>
+
+    <div class="navagiation-container">
+      <a href="https://github.com/EnsslinAdrian" target="_blank">Github</a>
+      <a href="mailto:ensslin.adrian@web.de">Email</a>
+      <a [routerLink]="['/impressum']">{{language ? 'Legal Notice' : 'Impressum'}}</a>
+    </div>
+
+    <h5>© Adrian Enßlin 2024</h5>
+
+  </div>
+</footer>

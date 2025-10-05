@@ -1,0 +1,24 @@
+<div class="input-container">
+  <label class="montserrat" [ngClass]="[color]" [for]="controlName">
+    <app-typografie text="{{ label }}" size="xmedium" color="green" [weight]="800" [align]="'left'" [font]="'karla'"></app-typografie>
+    <span class="duty" *ngIf="duty">*</span>
+    <span class="optional" *ngIf="optional">(optional)</span>
+  </label>
+
+  <div class="input-field" [ngClass]="borderActive ? 'border' : '' ">
+    <input [type]="type" [placeholder]="placeholder" [formControlName]="controlName" [id]="controlName" (focus)="onFocus()">
+    <img *ngIf="eyeIcon" class="password-eye-icon" [src]="passwordVisible ? '/img/icons/password/visibility.svg' : '/img/icons/password/visibility_off.svg'" alt="Passwort anzeigen" (click)="togglePasswordVisibility()">
+
+    <div class="tooltip-container" *ngIf="phone">
+      <img style="cursor: pointer;" class="phone-icon" src="/img/icons/info.svg" alt="Telefonnummer">
+      <app-typografie class="tooltip-text" [text]="'Wir benötigen Ihre Telefonnummer u.a für eventuelle Rückfragen zur Lieferung.'" size="small" color="white" [weight]="400" [align]="'left'"></app-typografie>
+    </div>
+
+  </div>
+</div>
+
+<div class="error-messages" *ngIf="control && control.invalid && (control.touched || control.dirty)">
+  <ng-container *ngFor="let errorKey of errorKeys()">
+    <app-typografie [text]=" errorMessages[errorKey] || defaultErrorMessages[errorKey] " size="xsmall" color="red" [weight]="400" [align]="'left'"></app-typografie>
+  </ng-container>
+</div>

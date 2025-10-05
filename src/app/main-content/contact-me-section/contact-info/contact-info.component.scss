@@ -1,0 +1,25 @@
+.info-text-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media(max-width: 900px) {
+    margin-bottom: 20px;
+  }
+}
+
+.talk-text {
+  font-size: 16px;
+  font-family: var(--font-karla);
+  font-weight: 400;
+  color: var(--white);
+
+  span {
+    font-family: var(--font-karla);
+    font-size: 16px;
+    color: var(--green);
+  }
+
+}
