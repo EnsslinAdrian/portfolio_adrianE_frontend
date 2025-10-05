@@ -48,7 +48,7 @@
         <app-typografie *ngIf="emailForm.get('checkbox')?.invalid && emailForm.get('checkbox')?.touched" text="{{language ? 'Please confirm the privacy policy' : 'Bitte bestätigen Sie die Datenschutzrichtlinie'}}" size="xsmall" color="red" [weight]="400" [align]="'left'"></app-typografie>
 
         <div class="btn-container">
-            <button *ngIf="sendBtn" [disabled]="!emailForm.valid" type="submit">{{language ? 'Say Hello 😊' : 'Sag Sie Hallo 😊'}} </button>
+            <button *ngIf="sendBtn" [disabled]="!emailForm.valid" type="submit">{{language ? 'Say Hello 😊' : 'Sagen Sie Hallo 😊'}} </button>
             <app-typografie *ngIf="sendBtn == false" text="{{language ? 'I will get back to you as soon as possible.' : 'Ich werde mich so schnell wie möglich bei Ihnen melden.'}}" size="small" color="green" [weight]="400" [align]="'left'"></app-typografie>
         </div>
 

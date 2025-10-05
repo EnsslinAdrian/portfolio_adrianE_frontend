@@ -1,6 +1,6 @@
 .overlay {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background: rgba(0, 0, 0, 0.4);
   position: fixed;
   top: 0;
@@ -33,7 +33,7 @@
   padding: 80px;
   gap: 10px;
   border-radius: 30px;
-  max-height: 90dvh;
+  max-height: 90%;
   overflow-y: auto;
   scrollbar-width: none;
 

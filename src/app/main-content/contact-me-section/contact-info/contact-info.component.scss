@@ -15,6 +15,9 @@
   font-family: var(--font-karla);
   font-weight: 400;
   color: var(--white);
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 
   span {
     font-family: var(--font-karla);
