@@ -33,5 +33,5 @@ jobs:
           echo "set ssl:verify-certificate no" > lftp.conf
           echo "set sftp:auto-confirm yes" >> lftp.conf
           echo "open -u ${{ secrets.SFTP_USERNAME }},${{ secrets.SFTP_PASSWORD }} sftp://${{ secrets.SFTP_SERVER }}:${{ secrets.SFTP_PORT }}" >> lftp.conf
-          echo "mirror -R --delete dist/portfolio_frontend/browser/ /adrianensslin/" >> lftp.conf
+          echo "mirror -R --delete dist/porftolio_frontend/browser/ /adrianensslin/" >> lftp.conf
           lftp -f lftp.conf
