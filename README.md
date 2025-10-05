@@ -20,6 +20,7 @@ Die Anwendung wurde mit modernen Webtechnologien entwickelt, ist vollständig re
 
 ## 🧩 Projektstruktur
 
+```
 public/ → Bilder, Icons & Fonts (statische Dateien)
 src/
 ├── app/
@@ -28,6 +29,7 @@ src/
 │ └── shared/ → Wiederverwendbare Layout- & UI-Komponenten
 ├── service/ → Services (Language, Projects, Contact)
 └── directive/ → Eigene Angular Directives
+```
 
 ---
 
