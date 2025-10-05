@@ -1,59 +1,59 @@
-# PorftolioFrontend
+# 🌐 Portfolio von Adrian Enßlin
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.5.
+Willkommen in meinem **Portfolio**!  
+Dieses Projekt präsentiert meine Arbeiten, Fähigkeiten und Projekte als **Full Stack Developer** mit Fokus auf **Angular, TypeScript, Python & Django**.  
+Die Anwendung wurde mit modernen Webtechnologien entwickelt, ist vollständig responsive und auf Performance & Qualität optimiert.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Technologien & Frameworks
 
-```bash
-ng serve
-```
+| Bereich | Technologien |
+|----------|---------------|
+| **Frontend** | Angular 19, TypeScript, SCSS, HTML5 |
+| **Backend (API)** | Python, Django, Django REST Framework |
+| **Datenbank** | PostgreSQL |
+| **Tools & DevOps** | Git, GitHub Actions, Docker, Firebase Hosting |
+| **Design & UI** | Angular Material, Responsive Design, Animations |
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🧩 Projektstruktur
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+public/ → Bilder, Icons & Fonts (statische Dateien)
+src/
+├── app/
+│ ├── main-content/ → Hauptseite mit About-Me, Skills, Projekte & Kontakt
+│ ├── imprint/ → Impressum & Datenschutz (lazy loaded)
+│ └── shared/ → Wiederverwendbare Layout- & UI-Komponenten
+├── service/ → Services (Language, Projects, Contact)
+└── directive/ → Eigene Angular Directives
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 👨‍💻 Über mich
 
-```bash
-ng generate --help
-```
+Ich bin **Adrian Enßlin**, leidenschaftlicher **Softwareentwickler** mit Fokus auf moderne Webtechnologien.  
+Mein Ziel ist es, performante, wartbare und ästhetisch ansprechende Anwendungen zu entwickeln – von der Idee bis zur Umsetzung.
 
-## Building
+**Fokusbereiche:**
+- 🔸 Angular & TypeScript  
+- 🔸 Python & Django REST Framework  
+- 🔸 Responsive Webdesign  
+- 🔸 API-Integration & Cloud-Lösungen  
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 📬 Kontakt
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+📧 **E-Mail:** [adrian.ensslin@gmail.com](mailto:adrian_ensslin@web.de)  
+🌐 **Website:** [adrianensslin.dev](https://adrianensslin.de/)  
+💼 **LinkedIn:** [linkedin.com/in/adrianensslin](https://www.linkedin.com/in/adrian-en%C3%9Flin-b5574b315/)  
+🐙 **GitHub:** [github.com/EnsslinAdrian](https://github.com/EnsslinAdrian)
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 📝 Lizenz
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Dieses Projekt ist unter der **MIT-Lizenz** veröffentlicht.  
+© 2024 Adrian Enßlin
